@@ -1,0 +1,161 @@
+@use "reset";
+@use "imgChica";
+
+// Variables
+
+$lumoColor: rgb(109, 109, 252);
+$sombra: 10px 5px 10px rgba(0, 0, 0, 0.5);
+
+//Estilos 
+
+.h1 {
+    padding: 50px;
+    margin: 50px;
+}
+
+.header {
+    height: 250px;
+    background-color: $lumoColor;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.9);
+    color: #f1f1f1;
+   ul li{
+        list-style: none;
+        display: inline-block;
+        margin: 10px;
+        font-size: larger;
+        
+    }
+}
+
+.hero {
+    width: 100%;
+    height:800px;
+    background-image: linear-gradient(
+        0deg,
+        rgba(109, 109, 252,0.3),
+        rgba(0,0,0,0.5) ), 
+        url(/imagenes/horizontal2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.5);
+
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    h1 {
+        text-align: center;
+        padding: 50px 50px;
+        text-shadow: black;
+    }
+    button {
+        background-color: $lumoColor;
+        padding: 20px;
+        border: none;
+        border-radius: 15px;
+        box-shadow: $sombra;
+        a {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 1.5em;
+        }
+    }
+}
+
+
+.imgMediana {
+    height: 400px;
+    margin: 6px;
+    box-shadow: $sombra;
+}
+
+.nosotros {
+    margin: 60px 0px;
+    background-color: $lumoColor;
+    box-shadow: $sombra;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(
+        0deg,
+        rgba(109, 109, 252,0.3),
+        rgba(0,0,0,0.5) ), 
+        url(/imagenes/horizontal5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    .contenido {
+        color: #f1f1f1;
+        text-align: center;
+        padding: 50px;
+        h1{
+            font-size: 2em;
+            padding: 50px;
+
+        }
+        p {
+            padding: 60px 10px;
+            max-width: 700px;
+            background-color: rgba($color: $lumoColor, $alpha: 0.6);
+            border-radius: 15px;
+        }
+        h4 {
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-style: italic;
+            font-weight: 100;
+            font-size: 0.9em;
+            padding: 30px;
+        }
+        
+    }
+    
+    
+
+
+
+}
+
+
+
+
+.final {
+    height: 80px;
+    background-color: $lumoColor;
+    color: #f1f1f1;
+    display: flex;
+    padding: 30px;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.logoChico {
+    height: 50px;
+    width: auto;
+}
+
+.imgChica {
+    height: 280px;
+    margin: 6px;
+    box-shadow: $sombra;
+}
+
+.imagenNosotros {
+    background-color: black;
+    height: 560px;
+    margin: 15px;
+}
+
+
+@media (min-width: 720px){
+    .header {
+        flex-direction: row;
+        height: 100px;
+    }
+
+}
