@@ -13,13 +13,8 @@ a {
   color: #f1f1f1;
 }
 
-.h1 {
-  padding: 50px;
-  margin: 50px;
-}
-
 .header {
-  height: 250px;
+  height: 230px;
   background-color: rgb(109, 109, 252);
   display: flex;
   flex-direction: column;
@@ -135,7 +130,8 @@ a {
   height: 100%;
   box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.5);
   transition: all 300ms;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .galeria .foto:hover {
   transform: scale(1.4);
@@ -218,6 +214,83 @@ a {
   margin: 15px;
 }
 
+.hero2 {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(/imagenes/horizontalHero2.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 160px;
+  transition: all 300ms;
+}
+.hero2 .heroVideo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero2 .heroVideo iframe {
+  height: 230px;
+  width: 470px;
+  margin: 20px;
+}
+.hero2 .textoVideo {
+  color: white;
+  text-align: center;
+  width: 300px;
+  font-size: 1.75em;
+  padding-bottom: 50px;
+}
+
+.contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2f2f2;
+  transition: all 300ms;
+  background-image: linear-gradient(0deg, rgba(109, 109, 252, 0.3), rgba(0, 0, 0, 0.5)), url(/imagenes/horizontal5.jpg);
+  background-position: center;
+  background-repeat: none;
+  background-size: cover;
+}
+.contacto h1 {
+  color: white;
+  padding: 50px;
+  margin-top: 150px;
+  text-align: center;
+  width: 300px;
+}
+.contacto form {
+  padding: 60px;
+  border-radius: 5px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-bottom: 120px;
+}
+.contacto form input, .contacto form textarea {
+  width: 270px;
+  padding: 15px;
+  margin: 30px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  display: flex;
+}
+.contacto form button {
+  padding: 15px 25px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  margin: 20px 30px;
+  transition: all 300ms;
+}
+.contacto form button:hover {
+  background-color: #3d8b40;
+}
+
 @media (min-width: 720px) {
   .header {
     flex-direction: row;
@@ -226,7 +299,8 @@ a {
   }
   .galeria {
     grid-template-columns: repeat(4, 1fr);
-    object-fit: none;
+    -o-object-fit: none;
+       object-fit: none;
   }
   .galeria .item:nth-child(2) {
     grid-column-start: span 2;
@@ -247,13 +321,17 @@ a {
   .galeria .item:nth-child(11) {
     grid-column-start: span 2;
   }
+  .heroVideo iframe {
+    height: 230px;
+  }
 }
 @media (min-width: 1024px) {
   .galeria {
     grid-template-columns: repeat(5, 1fr);
-    object-fit: none;
-    max-width: 1400px;
-    padding: 100px 0px 100px 130px;
+    -o-object-fit: none;
+       object-fit: none;
+    justify-content: center;
+    padding: 100px;
   }
   .galeria .item:nth-child(1) {
     grid-row-start: span 2;
@@ -281,6 +359,30 @@ a {
     grid-column-start: span 2;
     grid-row-start: span 2;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+  .contacto {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 150px 0px;
+  }
+  .contacto h1 {
+    margin-top: 0px;
+    margin-bottom: 95px;
+    text-align: left;
+    font-size: 3.6em;
+    padding: 83px;
+    width: 500px;
+  }
+  .contacto form {
+    margin-bottom: 0px;
+  }
+  .contacto form input, .contacto form textarea {
+    width: 450px;
+  }
+  .hero2 .heroVideo {
+    flex-direction: row;
+  }
+  .hero2 .heroVideo iframe {
+    height: 430px;
+  }
+}/*# sourceMappingURL=style.css.map */

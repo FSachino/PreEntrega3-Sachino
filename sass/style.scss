@@ -4,16 +4,16 @@
 
 $lumoColor: rgb(109, 109, 252);
 $sombra: 10px 5px 10px rgba(0, 0, 0, 0.5);
+$color-primario: #4CAF50;
+$color-fondo: #f2f2f2;
+$color-texto: #333;
 
 //Estilos 
 
-.h1 {
-    padding: 50px;
-    margin: 50px;
-}
+
 
 .header {
-    height: 250px;
+    height: 230px;
     background-color: $lumoColor;
     display: flex;
     flex-direction: column;
@@ -78,7 +78,7 @@ $sombra: 10px 5px 10px rgba(0, 0, 0, 0.5);
     }
 }
 
-
+// 
 .nosotros {
     text-shadow: 5px 5px 20px black;
     margin: 60px 0px;
@@ -259,7 +259,114 @@ $sombra: 10px 5px 10px rgba(0, 0, 0, 0.5);
     margin: 15px;
 }
 
+.hero2 {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.8) ),
+        url(/imagenes/horizontalHero2.jpg);
+        background-position: center;
+        background-size: cover;
 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 160px;
+
+        
+        transition: all 300ms;
+
+        .heroVideo {   
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            iframe {
+                height: 230px;
+                width: 470px;
+                margin: 20px;
+            }
+        }
+        
+
+        .textoVideo {
+    
+            color: white;
+            text-align: center;
+            width: 300px;
+            font-size: 1.75em;
+            padding-bottom: 50px;
+              
+        }
+}
+
+
+
+
+
+
+
+.contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f2f2f2;
+    transition: all 300ms;
+    background-image: linear-gradient(
+         0deg,
+         rgba(109, 109, 252,0.3),
+         rgba(0,0,0,0.5) ), 
+        url(/imagenes/horizontal5.jpg);
+        background-position: center;
+        background-repeat: none;
+        background-size: cover;
+
+        h1 {
+            color: white;
+            padding: 50px;
+            margin-top: 150px;
+            text-align: center;
+            width: 300px;
+        }
+
+    form {
+        padding: 60px;
+        border-radius: 5px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-bottom: 120px;
+        
+        input, textarea {
+            width: 270px;
+            padding: 15px;
+            margin: 30px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            display: flex;
+            
+        }
+        
+        button {
+            padding: 15px 25px;
+            background-color: $color-primario;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 6px;
+            margin: 20px 30px;
+            
+            transition: all 300ms;
+            
+            &:hover {
+                background-color: darken($color-primario, 10%);
+            }
+        }
+    }
+}
+    
+    
 @media (min-width: 720px){
     .header {
         flex-direction: row;
@@ -298,15 +405,22 @@ $sombra: 10px 5px 10px rgba(0, 0, 0, 0.5);
         }
 
     }
+
+    .heroVideo {
+        iframe {
+            height: 230px;
+        }
+    }
 }
+
 
 @media (min-width: 1024px){
 
     .galeria {
         grid-template-columns: repeat(5, 1fr);
         object-fit: none;
-        max-width: 1400px;
-        padding: 100px 0px 100px 130px;
+        justify-content: center;
+        padding: 100px;
 
         .item:nth-child(1){
             grid-row-start: span 2;
@@ -344,4 +458,38 @@ $sombra: 10px 5px 10px rgba(0, 0, 0, 0.5);
 
 }
 
+.contacto {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 150px 0px;
+
+    h1{
+        margin-top: 0px;
+        margin-bottom: 95px;
+        text-align: left;
+        font-size: 3.6em;
+        padding: 83px;
+        width: 500px;
+    }
+
+    form {
+        margin-bottom: 0px;
+
+        input, textarea {
+            width: 450px;
+        }
+    }
+}
+
+
+.hero2 {
+
+    .heroVideo {
+        flex-direction: row;
+        iframe {
+            height: 430px;
+        }
+    }
+}
 }
